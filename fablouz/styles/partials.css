@@ -1,0 +1,246 @@
+.partials {
+    display: none; 
+}
+
+.partials .partials-content {
+    background-color: #F6F6F7;    
+    height: 100%;
+    padding: 0;
+}
+
+.partials-details-selection {
+    margin-bottom: 1rem;
+}
+
+.partials-details-image {
+    position: relative;
+}
+
+.partials-details-image img { 
+    height: 25rem;
+    object-fit: cover;
+}
+
+.partials-details {
+    margin-bottom: 3rem;
+}
+
+.partials-details h4 {
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.partials-details h4:before {
+    position: absolute;
+    content: "";
+    top: 2rem;
+    width: 3rem;
+    height: 0.063rem;
+    background: #313132;
+}
+
+.partials-details img { 
+    height: 14rem;
+    object-fit: cover;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .partials-details-image img { 
+        height: 12rem;
+    }
+}
+
+span.image-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    display: inline-block;
+    color: #fff;
+    width: 8rem;
+    overflow: hidden;
+    margin-left: -4rem;
+    margin-top: -2rem;
+    height: 4rem;
+}
+
+span.image-title:before {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 0.125rem;
+    background-color: #fff;
+    top: 3rem;
+    left: 36%;
+}
+
+.partials-details-selection, .partials-details {
+    padding: 0 3rem 0 3rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .partials-details-selection, .partials-details {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+}
+
+.partials-info-icon {
+    background: url("images/info.svg") no-repeat;
+    height: 1rem;    
+    width: 1rem;
+    float: right;
+    cursor: pointer;
+}
+
+.image-type-details {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.font-bold {
+    font-weight: bolder;
+}
+
+span.image-title.upholstery-partial {
+    width: 11rem;
+    margin-left: -5.2rem;
+}
+
+span.image-title.upholstery-partial:before {
+    left: 40%;
+}
+
+span.image-title.wall-covering-partial {
+    width: 13rem;
+    margin-left: -6.2rem;
+}
+
+span.image-title.wall-covering-partial:before {
+    left: 46%;
+}
+
+span.image-title.wtow-carpets {
+    width: 19.3rem;
+    margin-left: -9.65rem;
+}
+
+span.image-title.wtow-carpets:before {
+    left: 8.65rem;
+}
+
+span.image-title.rugs {
+    width: 4.7rem;
+    margin-left: -2.35rem;
+}
+
+span.image-title.rugs:before {
+    left: 1.35rem;
+}
+
+span.image-title.wooden-floor {
+    width: 13.3rem;
+    margin-left: -6.65rem;
+}
+
+span.image-title.wooden-floor:before {
+    left: calc(50% - 1rem);
+}
+
+span.image-title.bed-lenin-bath {
+    width: 14.1rem;
+    margin-left: -7.05rem;
+}
+
+span.image-title.bed-lenin-bath:before {
+    left: calc(50% - 1rem);
+}
+
+span.image-title.accessaries {
+    width: 10.9rem;
+    margin-left: -3.64rem;
+}
+
+span.image-title.accessaries:before {
+    left: calc(50% - 1rem);
+}
+
+/* Dropdown styles */
+.bootstrap-select > .dropdown-toggle {
+    border: none;
+    background-color: #F6F6F7;
+    border-bottom: solid 1px #95979B;
+    border-radius: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none !important;
+}
+
+.partials .open > .dropdown-toggle.btn-default, 
+.partials open > .dropdown-toggle.btn-default:hover,
+.partials open > .dropdown-toggle.btn-default:focus {
+    background-color: #F6F6F7;
+    box-shadow: none;
+    outline: none !important;
+}
+
+.partials .btn-group.open .dropdown-toggle, .partials .btn-group.open .dropdown-toggle:focus {
+    background-color: #F6F6F7;
+    outline: none !important;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+    outline: none !important;
+}
+
+.btn-default:active:focus, .btn-default:active:hover {
+    background-color: #F6F6F7;
+    border-color: #95979B;
+}
+
+.partials .btn:active {
+    box-shadow: none;
+}
+
+.partials .dropdown-menu {
+    top: 2.25rem;
+    box-shadow: 0px 0px 6px 2px #DBDBDC;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li {
+    padding: 0.5rem;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li:hover {
+    background-color: #1A1718 !important;    
+}
+
+.bootstrap-select.btn-group .dropdown-menu li:hover a {
+    color: #fff !important;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a:hover {
+    background: #1A1718;
+    outline: none !important;
+    color: #fff !important;
+}
+
+.dropdown-menu > li > a:focus {
+    background-color: #fff;
+    outline-offset: 0;
+    outline: none;
+}
+
+.partials .caret {
+    border: none;
+    width: .5rem;
+    height: .5rem;
+    background: url("images/drop-down.svg") no-repeat;
+}
+
+.partials .bootstrap-select.open .caret {
+    background: url("images/drop-up.svg") no-repeat;
+}

@@ -1,0 +1,493 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #313132;
+    font-family: "Raleway";
+}
+
+/*main {
+    margin-top: 3rem;
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+}*/
+
+img {
+    width: 100%;
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+/* Navigation and Header */
+nav {
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    padding: 3rem;
+    top: 0;
+    background-color: #fff;
+}
+
+#nav-icon3 {
+    display: none;
+}
+
+br {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    nav {
+        position: fixed;
+        height: auto;
+        width: 100%;
+        padding: 2rem 2rem 0 2rem;
+        top: 0;
+        background: #fff;
+        z-index: 99;
+        opacity: 0.9;
+    }
+
+    #nav-icon3 {
+        display: inline-block;
+    }
+
+    .nav.nav-stacked {
+        display: none;
+    }
+
+    .nav.nav-stacked.open {
+        display: inline-block;
+        margin-top: 1.2rem;
+        margin-left: 3rem;
+    }
+
+    #wrapper {
+        margin-top: 12rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    nav {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+
+    #nav-icon3 {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 3rem;
+        right: 1.5rem;
+    }
+
+    #nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+        top: .5rem;
+    }
+
+    #nav-icon3 span:nth-child(4) {
+        top: 1rem;
+    }
+
+    #wrapper {
+        margin-top: 8rem;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+nav > ul {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left: 6.2rem;
+    width: 15rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    nav > ul {
+        margin-left: 3.7rem;
+    }
+}
+
+nav > ul > li > ul {
+    padding-left: 1rem;
+}
+
+nav > ul a {
+    color: #464749;
+    position: relative;
+}
+
+.nav > li > a:focus, .nav >li > a:hover {
+    background-color: transparent;
+    color: #464749;
+}
+
+nav > ul > li:first-child > a:after, nav > ul > li:last-child > a:after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background: url("images/drop-down.svg") no-repeat;
+    display: block;
+    right: 0;
+    top: 13px;
+    transform: rotate(-90deg);
+    transition: all ease-out .3s;
+}
+
+nav a.collapsed:after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background: url("images/drop-down.svg") no-repeat;
+    display: block;
+    right: 0;
+    top: 13px;
+    transform: rotate(0deg) !important;
+    transition: all ease-out .3s;
+}
+
+nav ul li ul li a {
+    color: #808285;
+    padding: .625rem .938rem;
+    display: inline-block;
+}
+
+nav ul li ul li a:hover {
+    color: #808285;
+    text-decoration: none;
+}
+
+#collection-menu.active, nav ul li ul li.active a {
+    color: #464749;
+    font-weight: bold;
+}
+
+nav .panel {
+    margin-bottom: 0;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+header {
+    padding: 3rem;
+    background: url("images/fabulouz-logo-text.svg") no-repeat;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    header {
+        background: url("images/faboulouz.svg") no-repeat;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.contact-tablet {
+    display: none;
+}
+
+.contact-non-tablet {
+    display: inherit;
+}
+
+@media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
+    .nav.nav-stacked.open {
+        display: inline-flex;
+    }
+
+    .contact-tablet {
+        display: inline-block;
+        padding: 10px 15px;
+    }
+
+    .nav > li.contact-non-tablet {
+        display: none;
+    }
+
+    nav > ul > li:first-child > a:after, nav > ul > li:last-child > a:after {
+        background: none;
+    }
+
+    .nav > li > a {
+        margin-right: 7rem;
+    }
+}
+
+/* Carousel */
+.owl-carousel .owl-item img {
+    height: 35rem;
+    object-fit: cover;
+}
+
+.owl-nav {
+    float: right;
+}
+
+
+.owl-dots {
+    counter-reset: slides-num;
+    /* Initialize counter. */
+    position: absolute;
+    top: 99.6%;
+    right: 5.4rem;
+    margin-top: 15px;
+    color: #464749;
+}
+
+.owl-dots:after {
+    content: counter(slides-num);
+    /* get total number of items - more info on http://www.sitepoint.com/a-little-known-way-to-replace-some-scripts-with-css-counters/ */
+    display: inline-block;
+    font-size: 1.1rem;
+    vertical-align: middle;
+    padding-left: 0px;
+}
+
+.owl-dot {
+    display: inline-block;
+    counter-increment: slides-num;
+    /* Increment counter */
+    margin-right: 3px;
+}
+
+.owl-dot.active:before {
+    content: counter(slides-num)  " /";
+    /* Use the same counter to get current item. */
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.info {
+    text-align: center;
+    margin-top: 110px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    display: none;
+}
+
+.owl-theme .owl-nav {
+    margin-right: 3rem;
+}
+
+.owl-theme .owl-nav .owl-prev {
+    margin-right: 4rem;
+    background: transparent url("images/drop-down.svg") no-repeat;
+    color: transparent;
+    font-size: 0.1rem;
+    transform: rotate(90deg);
+}
+
+.owl-theme .owl-nav .owl-next {
+    background: transparent url("images/drop-down.svg") no-repeat;
+    color: transparent;
+    font-size: 0.1rem;
+    transform: rotate(-90deg);
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: transparent url("images/drop-down.svg") no-repeat;
+    color: #464749;
+}
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    .owl-dots {
+        right: 3rem;
+    }
+
+    .owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
+        display: none;
+    }
+}
+
+/* Collections and About */
+.collections, .about {
+    margin-top: 3rem;
+}
+
+.about {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+.collections .collections-image, .about .about-image {
+    height: 18rem;
+    position: relative;
+}
+
+.collections-image span, .about-image span {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    font-size: 2rem;
+    display: inline-block;
+    color: #fff;
+    width: 11rem;
+    overflow: hidden;
+    margin-left: -5rem;
+    height: 4rem;
+}
+
+.collections-image span:before, .about-image span:before {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 0.125rem;
+    background-color: #fff;
+    top: 3rem;
+    left: 25%;
+}
+
+.collections-image span:before {
+    left: 4.3rem;
+}
+
+.about-image span {
+    width: 6rem;
+    margin-left: -3rem;
+}
+
+.about-image span:before {
+    left: 1.8rem;
+}
+
+.collections-details, .about-details {
+    padding: 3rem;
+    text-align: center;
+}
+
+.collections- div {
+    border: 1px solid;
+}
+
+.collections-tile {
+    padding: 0 3rem 0 3rem;
+}
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    .collections-tile {
+        padding: 0;
+    }
+}
+
+.collections-tile > div {
+    height: 12rem;
+    text-align: center;
+    position: relative;
+    line-height: 11;
+    padding: 0;
+    color: #313132;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+    .collections-tile > div {
+        line-height: 15;
+        font-size: 0.8rem;
+    }
+}
+
+.collections-tile > div > div {
+    background-size: cover;
+    background-position: 0px 72%;
+    height: 12rem;
+}
+
+.curtain-image {
+    background: url("images/carousel/3.jpg") no-repeat;
+}
+
+.upholstery-image {
+    background: url("images/carousel/4.jpg") no-repeat;
+}
+
+.wall-covering-image {
+    background: url("images/carousel/1.jpg") no-repeat;
+}
+
+.rugs-image {
+    background: url("images/carousel/8.jpg") no-repeat;
+}
+
+.wall-to-wall-image {
+    background: url("images/carousel/6.jpg") no-repeat;
+}
+
+.wooden-floor-image {
+    background: url("images/carousel/2.jpg") no-repeat;
+}
+
+/* Contact Details */
+.contact-details {
+    padding: 0 3rem 0 3rem;
+    margin-top: 3rem 0 3rem 0;
+    text-align: center;
+}
+
+.contact-details > div {
+    text-align: center;
+    width: 100%;
+    color: #303031;
+}
+
+.contact-details .heading {
+    color: #6D6E71;
+    font-size: 2.5rem;
+    position: relative;
+    height: 6rem;
+    display: inline-block;
+    width: auto;
+}
+
+.contact-details .heading:before {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 0.063rem;
+    background-color: #80634B;
+    top: 4rem;
+    left: 3.8rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.maps iframe {
+    pointer-events: none;
+    border: 0;
+    height: 30rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+    .maps iframe {
+        height: 18rem;
+    }
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    width: 15rem;
+    background: url("images/pattern.svg") no-repeat;
+    height: 3rem;
+    bottom: 0;
+    left: 8%;
+}
