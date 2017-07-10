@@ -3,7 +3,6 @@ $args = array( 'post_type' => 'page', 'pagename' => 'about', 'posts_per_page' =>
 
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post );?>
-?>
 
 <div class="row">
         <div class="col-md-4 offset-md-4"></div>

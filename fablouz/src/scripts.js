@@ -1,22 +1,22 @@
 $(document).ready(function() {
-    // $(".owl-carousel").owlCarousel({
-    //     nav : true, // Show next and prev buttons
-    //     loop: true,
-    //     items: 1,
-    //     margin: 10,
-    //     autoplay: true
-    //     // "singleItem:true" is a shortcut for:
-    //     // items : 1,
-    //     // itemsDesktop : false,
-    //     // itemsDesktopSmall : false,
-    //     // itemsTablet: false,
-    //     // itemsMobile : false
-    // });
+    $(".owl-carousel").owlCarousel({
+        nav : true, // Show next and prev buttons
+        loop: true,
+        items: 1,
+        margin: 10,
+        autoplay: true
+        // "singleItem:true" is a shortcut for:
+        // items : 1,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+    });
 
     // $("#collection-menu, #scocial-menu").on("click", function(e) {
     //     console.log("click");
     //     e.preventDefault();
-    //     e.stopPropagation();
+    //     e.stopPropagation(); 
     // });
 
     function mediaSize() {
@@ -42,7 +42,7 @@ $(document).ready(function() {
     /* Attach the function to the resize event listener */
     window.addEventListener('resize', mediaSize, false);
 
-    $('#nav-icon3').click(function(){
+    $('#nav-icon3').click(function() {
 		$(this).toggleClass('open');
         $(".nav.nav-stacked").toggleClass("open");
 	});
@@ -82,5 +82,14 @@ $(document).ready(function() {
         $("#collection-menu").removeClass("active");
         $("#collectionLevel1 li").removeClass("active");
         $(".owl-carousel").owlCarousel({autoplay: true});
+    });
+
+    // Scroll to top on scroll
+    $("#content").sectionsnap({
+        delay : 20, 
+        selector : '.section-snap', 
+        reference : 1, 
+        animationTime : 200,
+        offsetTop: 100
     });
 });

@@ -43,6 +43,7 @@
 .partials-details img { 
     height: 14rem;
     object-fit: cover;
+    cursor: pointer;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -243,4 +244,83 @@ span.image-title.accessaries:before {
 
 .partials .bootstrap-select.open .caret {
     background: url("images/drop-up.svg") no-repeat;
+}
+
+/* Product Details styles */
+.product-details-container {
+    background-color: #F6F6F7;    
+    height: 100vh;
+    padding: 3rem;
+}
+
+.product-details-container .owl-theme .owl-nav {
+    margin-right: -0.50rem;
+    margin-top: 1.250rem;
+}
+
+.product-details-container .owl-dots {
+    right: 1.9rem;
+    top: 35.5rem;    
+}
+
+.product-details-title {
+    border-bottom: solid 1px #95979B;
+    top: -1.8rem;
+}
+
+.product-details {
+    margin: 0;
+}
+
+.product-details .col-md-12 { 
+    padding: 0;
+}
+
+.product-details-title h4 span {
+    background: url("images/close.svg") no-repeat;
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
+    .product-details-container .owl-carousel .owl-item img {
+        height: 25rem;
+    }
+
+    .product-details-container .owl-dots {
+        right: 0;
+        top: auto;
+        margin-top: 1.5rem;
+    }
+
+    .product-details-title {
+        border-bottom: solid 1px #95979B;
+        top: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .product-details-container {
+        padding: 1.5rem;
+    }
+
+    .product-details-container .owl-carousel .owl-item img {
+        height: 12rem;
+    }
+
+    .product-details-container .owl-dots {
+        right: 0;
+        top: auto;
+        margin-top: 1.5rem;
+    }
+
+    .product-details-title {
+        border-bottom: solid 1px #95979B;
+        top: 1rem;
+        margin-bottom: 3rem;
+    }
 }

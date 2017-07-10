@@ -1,4 +1,15 @@
-
+ <!-- Partial files will be loaded dynamically dsfsdf s -->
+        <div class="partials curtains"></div>
+        <div class="partials upholstery"></div>
+        <div class="partials wallCoverings"></div>
+        <div class="partials wtowCarpets"></div>
+        <div class="partials rugs"></div>
+        <div class="partials woodenFloor"></div>
+        <div class="partials bedLeninBath"></div>
+        <div class="partials accessaries"></div>
+        <div class="partials productDetails"></div>
+        <div class="partials"></div>
+    </div> 
 </div>
 
 <footer id="footer"></footer>
@@ -13,6 +24,7 @@
 <script src="<?php bloginfo('template_url');?>/src/utils.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url');?>/src/scripts.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url');?>/src/partials.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url');?>/src/jquery-sectionsnap.js" type="text/javascript"></script>
 
 </body>
 </html>

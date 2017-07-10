@@ -42,6 +42,20 @@ br {
     margin-bottom: 2rem;
 }
 
+.break {
+    margin: 1rem;
+    display: block;
+    clear: both;
+    float: left;
+}
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    .break {
+        float: none;
+        overflow: hidden;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     nav {
         position: fixed;
@@ -404,34 +418,9 @@ header {
     }
 }
 
-.collections-tile > div > div {
-    background-size: cover;
-    background-position: 0px 72%;
+.collections-tile img {
+    object-fit: cover;
     height: 12rem;
-}
-
-.curtain-image {
-    background: url("images/carousel/3.jpg") no-repeat;
-}
-
-.upholstery-image {
-    background: url("images/carousel/4.jpg") no-repeat;
-}
-
-.wall-covering-image {
-    background: url("images/carousel/1.jpg") no-repeat;
-}
-
-.rugs-image {
-    background: url("images/carousel/8.jpg") no-repeat;
-}
-
-.wall-to-wall-image {
-    background: url("images/carousel/6.jpg") no-repeat;
-}
-
-.wooden-floor-image {
-    background: url("images/carousel/2.jpg") no-repeat;
 }
 
 /* Contact Details */

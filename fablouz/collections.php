@@ -2,10 +2,11 @@
 $args = array( 'post_type' => 'page', 'pagename' => 'collections', 'posts_per_page' => 999 );
 
 $myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post );?>
+foreach ( $myposts as $post ) : setup_postdata( $post );
+?>
 
 
-<div class="row">
+<div class="row section-snap">
     <div class="col-md-4 offset-md-4"></div>
     <div class="col-md-8 collections">
     <?php
@@ -24,17 +25,14 @@ foreach ( $myposts as $post ) : setup_postdata( $post );?>
         if($count % 2 == 0 )  { ?>
         <div class="row collections-tile">
             <div class="col-xs-6 col-sm-6 col-md-6">
-                <div class="">
-                    <?php 
-						if(get_sub_field('image')) {
-							$image = get_sub_field('image');?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
-						<?php }?>
-						
-                </div>
+                <?php 
+                    if(get_sub_field('image')) {
+                        $image = get_sub_field('image');?>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                <?php }?>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6">
-                    <?php the_sub_field('title'); ?>
+                <?php the_sub_field('title'); ?>
             </div>
         </div>
         <?php } else { ?>
@@ -43,15 +41,11 @@ foreach ( $myposts as $post ) : setup_postdata( $post );?>
                 <?php the_sub_field('title'); ?>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6">
-                <!--<div class="upholstery-image"></div>-->
-                <div class="">
-                    <?php 
-						if(get_sub_field('image')) {
-							$image = get_sub_field('image');?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
-						<?php }?>
-						
-                </div>
+                <?php 
+                    if(get_sub_field('image')) {
+                        $image = get_sub_field('image');?>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                <?php }?>
             </div>
         </div>
         <?php } ?>
@@ -60,7 +54,7 @@ foreach ( $myposts as $post ) : setup_postdata( $post );?>
 			endif;
 			?>
     </div>
-</div>
+
 
 <?php
 endforeach;
