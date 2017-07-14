@@ -19,6 +19,8 @@
 
 <link href="<?php bloginfo('template_url');?>/styles/styles.css" rel="stylesheet" type="text/css"></link>
 <link href="<?php bloginfo('template_url');?>/styles/hamburger.css" rel="stylesheet" type="text/css"></link>
+<link href="<?php bloginfo('template_url');?>/styles/partials.css" rel="stylesheet" type="text/css"></link>
+
 <link href="<?php bloginfo("stylesheet_url") ?>" rel="stylesheet" type="text/css" media="screen" />
 
 <?php wp_head(); ?>

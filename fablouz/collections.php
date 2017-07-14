@@ -22,7 +22,7 @@ foreach ( $myposts as $post ) : setup_postdata( $post );
         <?php if(get_field('collection_details')): $count=0;while(has_sub_field( 'collection_details' )): ++$count;?>
 
         <?php 
-        if($count % 2 == 0 )  { ?>
+        if($count % 2 != 0 )  { ?>
         <div class="row collections-tile">
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <?php 

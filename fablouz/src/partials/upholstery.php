@@ -1,6 +1,6 @@
 
 <?php
-$args = array( 'post_type' => 'page', 'pagename' => 'curtains', 'posts_per_page' => 999 );
+$args = array( 'post_type' => 'page', 'pagename' => 'upholstery', 'posts_per_page' => 999 );
 
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post );?>

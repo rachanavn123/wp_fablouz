@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Load all partials
-    $(".curtains").load("src/partials/curtains.php", function() {});
+   // $(".curtains").load("src/partials/curtains.php", function() {});
     $(".upholstery").load("src/partials/upholstery.html", function() {});
     $(".wallCoverings").load("src/partials/wall-coverings.html", function() {});
     $(".wtowCarpets").load("src/partials/wtow-carpets.html", function() {});
@@ -8,7 +8,7 @@ $(document).ready(function() {
     $(".woodenFloor").load("src/partials/wooden-floor.html", function() {});
     $(".bedLeninBath").load("src/partials/bed-lenin-bath.html", function() {});
 
-
+    console.log(" inside partials")
     $(".accessaries").load("src/partials/accessaries.html", function() {
         // TODO: We may have to run the loop here to handle other select boxes on other sections
         $('.selectpicker').on('changed.bs.select', function (event, clickedIndex) {
