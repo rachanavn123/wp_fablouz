@@ -16,6 +16,7 @@
 <link href="<?php bloginfo('template_url');?>/lib/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css"></link>
 <link href="<?php bloginfo('template_url');?>/lib/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css"></link>
 <link href="<?php bloginfo('template_url');?>/lib/animate.css" rel="stylesheet" type="text/css"></link>
+<link href="<?php bloginfo('template_url');?>/lib/bootstrap-select.min.css" rel="stylesheet" type="text/css"></link>
 
 <link href="<?php bloginfo('template_url');?>/styles/styles.css" rel="stylesheet" type="text/css"></link>
 <link href="<?php bloginfo('template_url');?>/styles/hamburger.css" rel="stylesheet" type="text/css"></link>
