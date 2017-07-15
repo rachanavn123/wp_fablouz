@@ -11,7 +11,9 @@
         <div class="partials woodenFloor"></div>
         <div class="partials bedLeninBath"></div>
         <div class="partials accessaries"></div>
-        <div class="partials productDetails"></div>
+        <div class="partials productDetails">
+            <?php get_template_part( "src/partials/product-details" ) ; ?>  
+        </div>
         <div class="partials"></div>
     </div> 
 </div>

@@ -10,7 +10,7 @@
 
 <title><?php bloginfo( 'title' ); ?></title>
 
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 <link href="<?php bloginfo('template_url');?>/lib/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
 <link href="<?php bloginfo('template_url');?>/lib/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css"></link>

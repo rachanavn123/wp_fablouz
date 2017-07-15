@@ -11,11 +11,11 @@
         <div class="row partials-details-selection">
             <div class="col-md-6 col-sm-6">
                 <select class="selectpicker form-control">
-                    <option>All</option>
-                    <option>Patterns & Florals</option>
-                    <option>Plain / Texture</option>
-                    <option>Stripes & Geomentricals</option>
-                    <option>Cotton</option>
+                    <option value="all">All</option>
+                    <option value="pattern-florals">Patterns & Florals</option>
+                    <option value="plain-texture">Plain / Texture</option>
+                    <option value="stipes-geo">Stripes & Geomentricals</option>
+                    <option value="cotton">Cotton</option>
                 </select>
             </div>
             <div class="col-md-6 col-sm-6 hidden-xs">
@@ -23,9 +23,9 @@
             </div>
         </div>
         <br>
-        <div class="row partials-details">
+        <div class="row partials-details" data-filter="pattern-florals">
             <div class="col-md-6 col-sm-6">
-                <img src="./styles/images/carousel/3.jpg" alt="">
+                <img src="./styles/images/carousel/3.jpg" alt="" onClick="onProductClick('curtains1')">
             </div>
             <div class="col-md-6 col-sm-6">
                 <h4>Curtain name 01</h4>
@@ -41,7 +41,7 @@
                 <span class="font-bold">Rs. 900</span>
             </div>
         </div>
-        <div class="row partials-details">
+        <div class="row partials-details" data-filter="pattern-florals">
             <div class="col-md-6 col-sm-6">
                 <img src="./styles/images/carousel/1.jpg" alt="">
             </div>
@@ -59,12 +59,66 @@
                 <span class="font-bold">Rs. 2500</span>
             </div>
         </div>
-        <div class="row partials-details">
+        <div class="row partials-details" data-filter="plain-texture">
             <div class="col-md-6 col-sm-6">
                 <img src="./styles/images/carousel/4.jpg" alt="">
             </div>
             <div class="col-md-6 col-sm-6">
-                <h4>Curtain name 03</h4>
+                <h4>Curtain name 03 - Plain / Texture</h4>
+                <div class="image-type-details">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                </div>
+                <div>
+                    <span class="font-bold">Product ID: </span> <span>#966RD</span>
+                </div>
+                 <div>
+                    <span class="font-bold">Size:</span> <span>10 X 4 in (4 pieces)</span>
+                </div>                  
+                <span class="font-bold">Rs. 2500</span>
+            </div>
+        </div>
+        <div class="row partials-details" data-filter="plain-texture">
+            <div class="col-md-6 col-sm-6">
+                <img src="./styles/images/carousel/4.jpg" alt="">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <h4>Curtain name 03 - Plain / Texture</h4>
+                <div class="image-type-details">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                </div>
+                <div>
+                    <span class="font-bold">Product ID: </span> <span>#966RD</span>
+                </div>
+                 <div>
+                    <span class="font-bold">Size:</span> <span>10 X 4 in (4 pieces)</span>
+                </div>                  
+                <span class="font-bold">Rs. 2500</span>
+            </div>
+        </div>
+        <div class="row partials-details" data-filter="stipes-geo">
+            <div class="col-md-6 col-sm-6">
+                <img src="./styles/images/carousel/4.jpg" alt="">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <h4>Curtain name 03 - Stipes Geo</h4>
+                <div class="image-type-details">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                </div>
+                <div>
+                    <span class="font-bold">Product ID: </span> <span>#966RD</span>
+                </div>
+                 <div>
+                    <span class="font-bold">Size:</span> <span>10 X 4 in (4 pieces)</span>
+                </div>                  
+                <span class="font-bold">Rs. 2500</span>
+            </div>
+        </div>
+        <div class="row partials-details" data-filter="cotton">
+            <div class="col-md-6 col-sm-6">
+                <img src="./styles/images/carousel/4.jpg" alt="">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <h4>Curtain name 03 - Cotton</h4>
                 <div class="image-type-details">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry
                 </div>

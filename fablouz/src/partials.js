@@ -1,12 +1,12 @@
 $(document).ready(function() {
     // Load all partials
    // $(".curtains").load("src/partials/curtains.php", function() {});
-    $(".upholstery").load("src/partials/upholstery.html", function() {});
-    $(".wallCoverings").load("src/partials/wall-coverings.html", function() {});
-    $(".wtowCarpets").load("src/partials/wtow-carpets.html", function() {});
-    $(".rugs").load("src/partials/rugs.html", function() {});
-    $(".woodenFloor").load("src/partials/wooden-floor.html", function() {});
-    $(".bedLeninBath").load("src/partials/bed-lenin-bath.html", function() {});
+    // $(".upholstery").load("src/partials/upholstery.html", function() {});
+    // $(".wallCoverings").load("src/partials/wall-coverings.html", function() {});
+    // $(".wtowCarpets").load("src/partials/wtow-carpets.html", function() {});
+    // $(".rugs").load("src/partials/rugs.html", function() {});
+    // $(".woodenFloor").load("src/partials/wooden-floor.html", function() {});
+    // $(".bedLeninBath").load("src/partials/bed-lenin-bath.html", function() {});
 
     console.log(" inside partials")
     $(".accessaries").load("src/partials/accessaries.html", function() {
@@ -37,7 +37,7 @@ $(document).ready(function() {
         });
     });
 
-    $(".productDetails").load("src/partials/product-details.html", function() {
+   // $(".productDetails").load("src/partials/product-details.html", function() {
         $(".product-details-carousel").owlCarousel({
             nav : true, // Show next and prev buttons
             loop: true,
@@ -45,7 +45,7 @@ $(document).ready(function() {
             margin: 10,
             autoplay: true
         });
-    });
+    //});
 
     // Register a click handler
     $("#collectionLevel1 li").on("click", function(e) {          
