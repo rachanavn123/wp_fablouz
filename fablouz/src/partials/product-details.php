@@ -1,17 +1,7 @@
 <div class="row">
     <div class="col-md-4 offset-md-4"></div>
     <div class="col-md-8 product-details-container">   
-        <div id="owl-demo" class="owl-carousel owl-theme product-details-carousel">
-            <!-- These images need to be gotten from backend, also need to depend on the type -->
-            <div class="item"><img src="./styles/images/carousel/1.jpg" alt="The Last of us"></div>
-            <div class="item"><img src="./styles/images/carousel/2.jpg" alt="The Last of us"></div>
-            <div class="item"><img src="./styles/images/carousel/3.jpg" alt="The Last of us"></div>
-            <div class="item"><img src="./styles/images/carousel/4.jpg" alt="The Last of us"></div>
-            <div class="item"><img src="./styles/images/carousel/5.jpg" alt="The Last of us"></div>
-            <div class="item"><img src="./styles/images/carousel/6.jpg" alt="The Last of us"></div>
-            <div class="item"><img src="./styles/images/carousel/7.jpg" alt="The Last of us"></div>
-            <div class="item"><img src="./styles/images/carousel/8.jpg" alt="The Last of us"></div>
-        </div>
+        <div id="owl-product-container"></div>
         <div class="row product-details">
             <div class="col-md-12 product-details-title">
                 <h4><span onclick="closeDetails()"></span> Curtain name 01</h4>

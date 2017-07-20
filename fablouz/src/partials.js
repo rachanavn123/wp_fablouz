@@ -9,7 +9,7 @@ $(document).ready(function() {
     // $(".bedLeninBath").load("src/partials/bed-lenin-bath.html", function() {});
 
     console.log(" inside partials")
-    $(".accessaries").load("src/partials/accessaries.html", function() {
+   // $(".accessaries").load("src/partials/accessaries.html", function() {
         // TODO: We may have to run the loop here to handle other select boxes on other sections
         $('.selectpicker').on('changed.bs.select', function (event, clickedIndex) {
             // Show all
@@ -35,16 +35,10 @@ $(document).ready(function() {
                 hideList.hide();
             }
         });
-    });
+   // });
 
    // $(".productDetails").load("src/partials/product-details.html", function() {
-        $(".product-details-carousel").owlCarousel({
-            nav : true, // Show next and prev buttons
-            loop: true,
-            items: 1,
-            margin: 10,
-            autoplay: true
-        });
+        
     //});
 
     // Register a click handler
@@ -69,9 +63,33 @@ $(document).ready(function() {
         }
     });
 
-    window.onProductClick = function(productName) {
+    window.onProductClick = function(productId, pageName) {
+        
         $(".partials").hide();
         $(".productDetails").show();
+         $.ajax({
+        url:  my_ajax_object.ajax_url,
+        data: {
+            'action':'get_images',
+            'productId' : productId,
+            'pageName': pageName
+        },
+        success:function(value) {
+            // This outputs the result of the ajax request
+            $("#owl-product-container").append('<div id="owl-product-details" class="owl-carousel owl-theme product-details-carousel">' + value + '</div>');
+            $("#owl-product-details").owlCarousel({
+                nav : true, // Show next and prev buttons
+                loop: true,
+                items: 1,
+                margin: 10,
+                autoplay: true
+            });
+            
+        },
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+    });
     };
 
     window.closeDetails = function() {

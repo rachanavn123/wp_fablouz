@@ -54,8 +54,11 @@ foreach ( $myposts as $post ) : setup_postdata( $post );?>
         ?>
         <div class="row partials-details" data-filter="<?php the_sub_field('section_id'); ?>">
             <div class="col-md-6 col-sm-6">
-                <?php $image = get_sub_field('subsection_image'); ?>
-                <img src="<?php echo $image['url']; ?>" alt="" onClick="onProductClick('curtains1')">
+                <?php 
+                    
+                    $image = get_sub_field('subsection_image'); 
+                ?>
+                <img src="<?php echo $image['url']; ?>" alt="" onClick="onProductClick('<?php the_sub_field('product_id'); ?>', 'curtains')">
             </div>
             <div class="col-md-6 col-sm-6">
                 <h4><?php the_sub_field('section_id'); ?> </h4>
