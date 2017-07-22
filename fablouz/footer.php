@@ -26,11 +26,12 @@
 <script src="<?php bloginfo('template_url');?>/lib/OwlCarousel2-2.2.1/dist/owl.carousel.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url');?>/lib/parallax.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url');?>/lib/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url');?>/src/jquery-sectionsnap.js" type="text/javascript"></script>
+
 
 <script src="<?php bloginfo('template_url');?>/src/utils.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url');?>/src/scripts.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url');?>/src/partials.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url');?>/src/jquery-sectionsnap.js" type="text/javascript"></script>
 
 </body>
 </html>

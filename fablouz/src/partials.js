@@ -74,9 +74,19 @@ $(document).ready(function() {
             'productId' : productId,
             'pageName': pageName
         },
+        async: false,
+        datatype: 'json',
         success:function(value) {
             // This outputs the result of the ajax request
-            $("#owl-product-container").append('<div id="owl-product-details" class="owl-carousel owl-theme product-details-carousel">' + value + '</div>');
+            console.log(" alsdjflkasdfl;j 123 --> ", value);
+            $("#owl-product-container").append('<div id="owl-product-details" class="owl-carousel owl-theme product-details-carousel">' + value.options + '</div>');
+            $("#section-header").append( value.section_header);
+            $("#product-detail-description").append( value.long_description);
+            $("#product-id").append( value.productId);
+            $("#product-size").append( value.productSize);
+            $("#product-price").append( "Rs. " + value.price);
+
+            
             $("#owl-product-details").owlCarousel({
                 nav : true, // Show next and prev buttons
                 loop: true,
@@ -93,6 +103,13 @@ $(document).ready(function() {
     };
 
     window.closeDetails = function() {
+        $("#owl-product-details").remove();
+        $("#section-header").html( '');
+        $("#product-detail-description").html('');
+        $("#product-id").html('');
+        $("#product-size").html('');
+        $("#product-price").html('');
+        
         $(".productDetails").hide();
         $("." + $("#collectionLevel1 li.active").attr("id")).show();
     }; 

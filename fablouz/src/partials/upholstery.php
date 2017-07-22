@@ -1,4 +1,3 @@
-
 <?php
 $args = array( 'post_type' => 'page', 'pagename' => 'upholstery', 'posts_per_page' => 999 );
 
@@ -19,20 +18,31 @@ foreach ( $myposts as $post ) : setup_postdata( $post );?>
         </div>
         <br>
         <br>
-        <!--<div class="row partials-details-selection">
+        <div class="row partials-details-selection">
             <div class="col-md-6 col-sm-6">
                 <select class="selectpicker form-control">
                     <option value="all">All</option>
-                    <option value="pattern-florals">Patterns & Florals</option>
-                    <option value="plain-texture">Plain / Texture</option>
-                    <option value="stipes-geo">Stripes & Geomentricals</option>
-                    <option value="cotton">Cotton</option>
+                    <?php
+            
+                         if(get_field('options')): $count=0;
+            
+                            while(has_sub_field( 'options' )): ++$count;
+            
+                    ?>
+                                <option value="<?php the_sub_field('filter_id'); ?>"><?php the_sub_field('filter_value'); ?></option>
+                    <?php	
+			                endwhile; 
+			            endif;
+			        ?>
+      
                 </select>
             </div>
             <div class="col-md-6 col-sm-6 hidden-xs">
                 <span class="partials-info-icon"></span>
             </div>
-        </div>-->
+        </div>
+
+        	
         <br>
         <?php
             
@@ -41,13 +51,16 @@ foreach ( $myposts as $post ) : setup_postdata( $post );?>
             while(has_sub_field( 'section_details' )): ++$count;
             
         ?>
-        <div class="row partials-details" data-filter="pattern-florals">
+        <div class="row partials-details" data-filter="<?php the_sub_field('section_id'); ?>">
             <div class="col-md-6 col-sm-6">
-                <?php $image = get_sub_field('subsection_image'); ?>
-                <img src="<?php echo $image['url']; ?>" alt="" onClick="onProductClick('curtains1')">
+                <?php 
+                    
+                    $image = get_sub_field('subsection_image'); 
+                ?>
+                <img src="<?php echo $image['url']; ?>" alt="" onClick="onProductClick('<?php the_sub_field('product_id'); ?>', 'curtains')">
             </div>
             <div class="col-md-6 col-sm-6">
-                <h4><?php the_sub_field('section_header'); ?> </h4>
+                <h4><?php the_sub_field('section_id'); ?> </h4>
                 <div class="image-type-details">
                     <?php the_sub_field('description'); ?>
                 </div>
