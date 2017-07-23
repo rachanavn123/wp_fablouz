@@ -32,7 +32,9 @@
 <script src="<?php bloginfo('template_url');?>/src/utils.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url');?>/src/scripts.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url');?>/src/partials.js" type="text/javascript"></script>
-
+<script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMA1RE6xLpufkXJw2XvQpEt7Rw4rGeCXM&callback=initMap">
+</script>
 </body>
 </html>
 

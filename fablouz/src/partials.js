@@ -67,7 +67,7 @@ $(document).ready(function() {
         
         $(".partials").hide();
         $(".productDetails").show();
-         $.ajax({
+        $.ajax({
         url:  my_ajax_object.ajax_url,
         data: {
             'action':'get_images',
@@ -78,7 +78,6 @@ $(document).ready(function() {
         datatype: 'json',
         success:function(value) {
             // This outputs the result of the ajax request
-            console.log(" alsdjflkasdfl;j 123 --> ", value);
             $("#owl-product-container").append('<div id="owl-product-details" class="owl-carousel owl-theme product-details-carousel">' + value.options + '</div>');
             $("#section-header").append( value.section_header);
             $("#product-detail-description").append( value.long_description);

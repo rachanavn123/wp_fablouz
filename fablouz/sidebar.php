@@ -1,11 +1,14 @@
-
 <nav id="nav">
         <header>
-        </header>        
+        </header>
         <ul class="nav nav-stacked" id="collection">
             <li class="panel">
                 <a data-toggle="collapse" id="collection-menu"
-                    data-parent="#collection" href="#collectionLevel1" class="collapsed">Collection</a>
+                    data-parent="#collection" href="#collectionLevel1" 
+                    class="collapsed"
+                    onclick="closeDetails()">
+                    Collection
+                </a>
                 <ul id="collectionLevel1" class="collapse">
                     <li id="curtains"><a href="#">CURTAINS</a></li>
                     <li id="upholstery"><a href="#">Upholstery</a></li>
@@ -18,21 +21,23 @@
                 </ul>
             </li>
             <li>
-                <a href="#">About</a>
+                <a href="#" class="scroll-to" data-scrollto="about">About</a>
                 <div class="contact-tablet">
-                    <a href="#">Contact</a>
+                    <a href="#" class="scroll-to" data-scrollto="contact">Contact</a>
                 </div>
             </li>
-            <li class="contact-non-tablet"><a href="#">Contact</a></li>
+            <li class="contact-non-tablet">
+                <a href="#" data-scrollto="contact" class="scroll-to">Contact</a>
+            </li>
             <li class="panel">
                 <a data-toggle="collapse" id="scocial-menu" data-parent="#collection"
                     href="#collectionLevel2" class="collapsed">Scocial</a>
                 <ul id="collectionLevel2" class="collapse">
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
                 </ul>
             </li>
-        </ul>
+        </ul>     
         <div id="nav-icon3">
             <span></span>
             <span></span>

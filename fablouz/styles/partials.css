@@ -4,7 +4,7 @@
 
 .partials .partials-content {
     background-color: #F6F6F7;    
-    height: 100%;
+    height: 100vh;
     padding: 0;
 }
 
@@ -14,6 +14,16 @@
 
 .partials-details-image {
     position: relative;
+}
+
+.partials-details-image:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .partials-details-image img { 
@@ -80,9 +90,46 @@ span.image-title:before {
     padding: 0 3rem 0 3rem;
 }
 
+.partials-details-selection.affix {
+    background-color: #F6F6F7;
+    z-index: 98;
+    width: 100%;
+    padding: 1rem 0 2rem 1.3rem;
+    margin-left: 0;
+    top: 0;
+    box-shadow: 6px 3px 11px 1px #ccc;    
+}
+
+.partials-details-selection.affix .col-md-6 {
+    width: 33.1%;
+}
+
+.partials-details-selection.affix .partials-info-icon {
+    margin: 1rem 2rem 0 0;
+}
+
+@media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
+    .partials-details-selection.affix {
+        padding: 6rem 0 2rem 1.3rem;
+    }
+
+    .partials-details-selection.affix .col-md-6 {
+        width: 49%;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
     .partials-details-selection, .partials-details {
         padding: 0 1.5rem 0 1.5rem;
+    }
+
+    .partials-details-selection.affix {
+        padding: 4.2rem 0 2rem 2.3rem;
+    }
+
+    .partials-details-selection.affix .col-md-6 {
+        width: 90%;
+        padding: 0; 
     }
 }
 
@@ -285,6 +332,11 @@ span.image-title.accessaries:before {
     cursor: pointer;
 }
 
+.product-details-container .owl-carousel .owl-item img {
+    height: 35rem;
+    margin-top: 0;
+}
+ 
 @media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
     .product-details-container .owl-carousel .owl-item img {
         height: 25rem;

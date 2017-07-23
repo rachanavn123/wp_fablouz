@@ -13,15 +13,29 @@ $(document).ready(function() {
         // itemsMobile : false
     });
 
-    // $("#collection-menu, #scocial-menu").on("click", function(e) {
-    //     console.log("click");
-    //     e.preventDefault();
-    //     e.stopPropagation(); 
-    // });
+    // Scroll to About or Contact
+    $(".scroll-to").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation(); 
+        
+        // Check if view is scrolled to the bottom
+        if(!($(window).scrollTop() + window.innerHeight === $(document).height())) {
+            var scrollTo = $("." + $(e.target).data("scrollto")),
+                container = $("body");
+
+            container.animate({
+                scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+            });
+        }
+    });
 
     function mediaSize() {
         var tablet = '(min-width: 768px) and (max-width: 979px) and (orientation: portrait)',
-            mobilePlusTablet = '(min-width: 320px) and (max-width: 979px) and (orientation: portrait)';
+            mobile = '(min-width: 320px) and (max-width: 767px)',
+            mobilePlusTablet = '(min-width: 320px) and (max-width: 979px) and (orientation: portrait)',
+            adjustedTop = window.matchMedia(tablet).matches 
+                ? 592 : window.matchMedia(mobile).matches 
+                ? 320 : 400;
 
 		if (window.matchMedia(tablet).matches) {
 	    	$("#collectionLevel1, #collectionLevel2").addClass("in");
@@ -34,6 +48,16 @@ $(document).ready(function() {
         } else {
             $("#nav").removeClass("touch-device");
         }
+
+        // TODO: Remove timeout for production
+        setTimeout(function() {
+            // Afix prodcut selection section
+            $(".partials-details-selection").affix({
+                offset: {
+                    top: adjustedTop
+                }
+            });
+        }, 500);
 	};
 
     /* Call the function */
@@ -43,8 +67,19 @@ $(document).ready(function() {
     window.addEventListener('resize', mediaSize, false);
 
     $('#nav-icon3').click(function() {
-		$(this).toggleClass('open');
-        $(".nav.nav-stacked").toggleClass("open");
+        var nav = $(".nav.nav-stacked");
+
+        $(this).toggleClass('open');
+        
+        if (nav.hasClass("open")) {
+            nav.slideUp(500, function(e) {            
+                nav.removeClass("open");
+            });
+        } else {
+            nav.slideDown(500, function(e) {            
+                nav.addClass("open");
+            });
+        }      
 	});
 
     // Reveal or hide menu on scroll up or down respectively
@@ -91,5 +126,21 @@ $(document).ready(function() {
         reference : 1, 
         animationTime : 200,
         offsetTop: 100
-    });
+    });   
 });
+
+// Show the map
+function initMap() {
+    var carpetUdyog = {lat: 13.0019842, lng: 77.5688824};
+    var map = new google.maps.Map(document.querySelector('.maps'), {
+        scrollwheel: false,
+        zoom: 17,
+        center: carpetUdyog
+    });
+
+    var marker = new google.maps.Marker({
+        position: carpetUdyog,
+        map: map,
+        title: "Carpet Udyog"
+    });
+}

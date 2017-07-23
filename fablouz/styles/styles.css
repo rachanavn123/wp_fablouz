@@ -5,7 +5,15 @@ html {
 body {
     color: #313132;
     font-family: "Raleway";
+    overflow-x: hidden;
+    margin-right: 0;
 }
+
+/* @media (min-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+} */
 
 /*main {
     margin-top: 3rem;
@@ -49,6 +57,25 @@ br {
     float: left;
 }
 
+/* .animate-up {
+    transition: margin 1s;
+    margin-top: 0;
+} */
+
+.container-fluid, .col-md-8 {
+    padding: 0;
+}
+
+.parallax-window:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     .break {
         float: none;
@@ -76,14 +103,20 @@ br {
         display: none;
     }
 
-    .nav.nav-stacked.open {
+    /* .nav.nav-stacked.open {
         display: inline-block;
+        margin-top: 1.2rem;
+        margin-left: 3rem;
+    } */
+
+    .nav.nav-stacked.open {
+        display: inline-flex !important;
         margin-top: 1.2rem;
         margin-left: 3rem;
     }
 
     #wrapper {
-        margin-top: 12rem;
+        margin-top: 9rem;
     }
 }
 
@@ -108,7 +141,11 @@ br {
     }
 
     #wrapper {
-        margin-top: 8rem;
+        margin-top: 6.5rem;
+    }
+
+    .nav.nav-stacked.open {
+        display: block !important;
     }
 }
 
@@ -127,6 +164,7 @@ nav > ul {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     nav > ul {
         margin-left: 3.7rem;
+        width: 12rem;
     }
 }
 
@@ -198,14 +236,14 @@ nav .panel {
 header {
     padding: 3rem;
     background: url("images/fabulouz-logo-text.svg") no-repeat;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
     header {
         background: url("images/faboulouz.svg") no-repeat;
         padding: 2rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0;
     }
 }
 
@@ -218,10 +256,6 @@ header {
 }
 
 @media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
-    .nav.nav-stacked.open {
-        display: inline-flex;
-    }
-
     .contact-tablet {
         display: inline-block;
         padding: 10px 15px;
@@ -242,8 +276,23 @@ header {
 
 /* Carousel */
 .owl-carousel .owl-item img {
-    height: 35rem;
+    margin-top: 3rem;
+    height: calc(100vh - 8rem);
     object-fit: cover;
+}
+
+@media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
+    .owl-carousel .owl-item img {
+        margin-top: 1.5rem;
+        height: calc(100vh - 14rem);        
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .owl-carousel .owl-item img {
+        margin-top: 0.5rem;
+        height: calc(100vh - 10rem);        
+    }
 }
 
 .owl-nav {
@@ -323,7 +372,7 @@ header {
 
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     .owl-dots {
-        right: 3rem;
+        right: 1.5rem;
     }
 
     .owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
@@ -392,7 +441,7 @@ header {
 }
 
 .collections-tile {
-    padding: 0 3rem 0 3rem;
+    padding: 0 4.7rem 0 3rem;
 }
 
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
@@ -424,6 +473,10 @@ header {
 }
 
 /* Contact Details */
+.contact {
+    margin-bottom: 3rem;
+}
+
 .contact-details {
     padding: 0 3rem 0 3rem;
     margin-top: 3rem 0 3rem 0;
@@ -459,10 +512,10 @@ header {
     font-weight: bold;
 }
 
-.maps iframe {
-    pointer-events: none;
+.maps {
     border: 0;
     height: 30rem;
+    margin-bottom: 3rem;
 }
 
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
@@ -479,4 +532,14 @@ footer {
     height: 3rem;
     bottom: 0;
     left: 8%;
+}
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    footer {
+        display: none;
+    }
+}
+
+.product-details-title p{
+    display: inline;
 }
