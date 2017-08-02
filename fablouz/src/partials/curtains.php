@@ -47,6 +47,7 @@ foreach ( $myposts as $post ) : setup_postdata( $post );?>
         ?>
         <div class="row partials-details" data-filter="<?php the_sub_field('section_id'); ?>">
             <div class="col-md-6 col-sm-6">
+                <div class="padding-da"></div>
                 <?php 
                     $image = get_sub_field('subsection_image'); 
                 ?>

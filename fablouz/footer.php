@@ -18,6 +18,10 @@
     </div> 
 </div>
 
+<div class="mobile-landscape-section">
+    This site is not optimized for mobile landscape mode
+</div>
+
 <footer id="footer" class-"hidden-xs hidden-sm"></footer>
 <!-- end #footer -->
 

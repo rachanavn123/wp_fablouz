@@ -87,12 +87,11 @@ br {
     nav {
         position: fixed;
         height: auto;
-        width: 100%;
-        padding: 2rem 2rem 0 2rem;
+        width: 100vw;
+        padding: 2rem 2rem 2rem 2rem;
         top: 0;
         background: #fff;
         z-index: 99;
-        opacity: 0.9;
     }
 
     #nav-icon3 {
@@ -103,26 +102,24 @@ br {
         display: none;
     }
 
-    /* .nav.nav-stacked.open {
-        display: inline-block;
-        margin-top: 1.2rem;
-        margin-left: 3rem;
-    } */
 
     .nav.nav-stacked.open {
         display: inline-flex !important;
-        margin-top: 1.2rem;
-        margin-left: 3rem;
+        margin-top: 1.2rem;        
     }
 
     #wrapper {
         margin-top: 9rem;
     }
+
+    .row {
+         margin: 0; 
+    }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
     nav {
-        padding: 1.5rem 1.5rem 0 1.5rem;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     }
 
     #nav-icon3 {
@@ -187,12 +184,10 @@ nav > ul > li:first-child > a:after, nav > ul > li:last-child > a:after {
     position: absolute;
     width: 1rem;
     height: 1rem;
-    background: url("images/drop-down.svg") no-repeat;
+    background: url("images/drop-up.svg") no-repeat;
     display: block;
     right: 0;
     top: 13px;
-    transform: rotate(-90deg);
-    transition: all ease-out .3s;
 }
 
 nav a.collapsed:after {
@@ -200,12 +195,10 @@ nav a.collapsed:after {
     position: absolute;
     width: 1rem;
     height: 1rem;
-    background: url("images/drop-down.svg") no-repeat;
+    background: url("images/drop-down.svg") no-repeat !important;
     display: block;
     right: 0;
-    top: 13px;
-    transform: rotate(0deg) !important;
-    transition: all ease-out .3s;
+    top: 13px;    
 }
 
 nav ul li ul li a {
@@ -237,6 +230,22 @@ header {
     padding: 3rem;
     background: url("images/fabulouz-logo-text.svg") no-repeat;
     margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+nav > ul {
+    margin: auto;
+}
+
+@media (min-width: 1024px) {
+    header {
+        background: url("images/fabulouz-logo-text.svg") no-repeat center center;        
+    }
+
+    nav > ul {
+        margin: auto;
+        margin-top: 4rem;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -266,11 +275,40 @@ header {
     }
 
     nav > ul > li:first-child > a:after, nav > ul > li:last-child > a:after {
-        background: none;
+        background: none !important;
     }
 
     .nav > li > a {
         margin-right: 7rem;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    .nav {        
+        margin-bottom: 0;
+        list-style: none;
+        position: fixed;
+        background: white;
+        top: 9.3rem;
+        left: -3rem;
+        width: 100%;
+        background-color: rgba(255, 255, 255, .9);
+        padding: 3rem 0 3rem 6rem;
+        margin-left: 3rem;
+    }
+    nav .panel {   
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) { 
+    .nav {
+        top: 5.8rem;
+    }
+
+    nav .panel {
+        width: 13rem;
     }
 }
 
@@ -292,6 +330,27 @@ header {
     .owl-carousel .owl-item img {
         margin-top: 0.5rem;
         height: calc(100vh - 10rem);        
+    }
+}
+
+.mobile-landscape-section {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    .mobile-landscape-section {
+        display: block;
+        width: 65%;
+        margin: auto;
+        text-align: center;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        border: 1px solid #e5b700;
+        margin-top: 5rem;
+    }
+
+    #nav, #wrapper, footer {
+        display: none;
     }
 }
 
@@ -391,13 +450,13 @@ header {
 }
 
 .collections .collections-image, .about .about-image {
-    height: 18rem;
+    height: 23rem; 
     position: relative;
 }
 
 .collections-image span, .about-image span {
     position: absolute;
-    top: 7rem;
+    top: 9.5rem;    
     left: 50%;
     font-size: 2rem;
     display: inline-block;
@@ -451,25 +510,24 @@ header {
 }
 
 .collections-tile > div {
-    height: 12rem;
+    height: 30.3vh;
     text-align: center;
     position: relative;
-    line-height: 11;
+    line-height: 17.4;
     padding: 0;
     color: #313132;
     font-size: 1.1rem;
 }
 
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-    .collections-tile > div {
-        line-height: 15;
+    .collections-tile > div {        
         font-size: 0.8rem;
     }
 }
 
 .collections-tile img {
     object-fit: cover;
-    height: 12rem;
+    height: 30.3vh;
 }
 
 /* Contact Details */

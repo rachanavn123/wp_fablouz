@@ -1,14 +1,5 @@
 $(document).ready(function() {
-    // Load all partials
-   // $(".curtains").load("src/partials/curtains.php", function() {});
-    // $(".upholstery").load("src/partials/upholstery.html", function() {});
-    // $(".wallCoverings").load("src/partials/wall-coverings.html", function() {});
-    // $(".wtowCarpets").load("src/partials/wtow-carpets.html", function() {});
-    // $(".rugs").load("src/partials/rugs.html", function() {});
-    // $(".woodenFloor").load("src/partials/wooden-floor.html", function() {});
-    // $(".bedLeninBath").load("src/partials/bed-lenin-bath.html", function() {});
 
-    console.log(" inside partials")
    // $(".accessaries").load("src/partials/accessaries.html", function() {
         // TODO: We may have to run the loop here to handle other select boxes on other sections
         $('.selectpicker').on('changed.bs.select', function (event, clickedIndex) {
@@ -64,9 +55,13 @@ $(document).ready(function() {
     });
 
     window.onProductClick = function(productId, pageName) {
-        
+        console.log(" inside onProductClick");
         $(".partials").hide();
         $(".productDetails").show();
+
+        console.log(" inside onProductClick");
+
+        
         $.ajax({
         url:  my_ajax_object.ajax_url,
         data: {

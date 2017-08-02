@@ -4,8 +4,21 @@
 
 .partials .partials-content {
     background-color: #F6F6F7;    
-    height: 100vh;
+    height: 100%;  
+    position: relative;
+    min-height: 100vh;    
     padding: 0;
+}
+
+.partials-details {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.partials-details .padding-da {
+    padding-bottom: 68.4%;
 }
 
 .partials-details-selection {
@@ -39,6 +52,7 @@
     font-weight: bold;
     position: relative;
     margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 .partials-details h4:before {
@@ -51,14 +65,24 @@
 }
 
 .partials-details img { 
-    height: 14rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
     object-fit: cover;
     cursor: pointer;
+    display: block;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
     .partials-details-image img { 
         height: 12rem;
+    }
+
+    .partials-details h4 {        
+        margin-top: .625rem;
     }
 }
 
@@ -109,9 +133,9 @@ span.image-title:before {
 }
 
 @media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
-    .partials-details-selection.affix {
+    /* .partials-details-selection.affix {
         padding: 6rem 0 2rem 1.3rem;
-    }
+    } */
 
     .partials-details-selection.affix .col-md-6 {
         width: 49%;
@@ -123,9 +147,9 @@ span.image-title:before {
         padding: 0 1.5rem 0 1.5rem;
     }
 
-    .partials-details-selection.affix {
+    /* .partials-details-selection.affix {
         padding: 4.2rem 0 2rem 2.3rem;
-    }
+    } */
 
     .partials-details-selection.affix .col-md-6 {
         width: 90%;
