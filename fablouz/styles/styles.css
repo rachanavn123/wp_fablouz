@@ -76,6 +76,10 @@ br {
     background: rgba(0, 0, 0, 0.2);
 }
 
+.row.cover-page {
+    margin-bottom: 3rem;
+}
+
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     .break {
         float: none;
@@ -440,7 +444,7 @@ nav > ul {
 }
 
 /* Collections and About */
-.collections, .about {
+.about {
     margin-top: 3rem;
 }
 
@@ -501,6 +505,7 @@ nav > ul {
 
 .collections-tile {
     padding: 0 4.7rem 0 3rem;
+    display: flex;
 }
 
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
@@ -509,14 +514,15 @@ nav > ul {
     }
 }
 
-.collections-tile > div {
-    height: 30.3vh;
+.collections-tile > div {    
     text-align: center;
     position: relative;
-    line-height: 17.4;
     padding: 0;
     color: #313132;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
@@ -525,9 +531,20 @@ nav > ul {
     }
 }
 
+.collections .padding-da-da {
+    padding-bottom: 80.5%;
+}
+
 .collections-tile img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
     object-fit: cover;
-    height: 30.3vh;
+    cursor: pointer;
+    display: block;
 }
 
 /* Contact Details */
