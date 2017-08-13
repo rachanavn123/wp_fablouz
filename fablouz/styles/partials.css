@@ -320,7 +320,7 @@ span.image-title.accessaries:before {
 /* Product Details styles */
 .product-details-container {
     background-color: #F6F6F7;    
-    height: 100vh;
+    min-height: 100vh;
     padding: 3rem;
 }
 
@@ -330,7 +330,7 @@ span.image-title.accessaries:before {
 }
 
 .product-details-container .owl-dots {
-    right: 1.9rem;
+    right: 1rem;
     top: 35.5rem;    
 }
 

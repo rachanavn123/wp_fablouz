@@ -25,24 +25,24 @@
                                         <div class="padding-da-da"></div> 
                                         <?php if(get_sub_field('image')) {
                                                 $image = get_sub_field('image');?>
-                                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" id="<?php the_sub_field('id'); ?>"/>
                                         <?php }?>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <?php the_sub_field('title'); ?>
+                                        <span><?php the_sub_field('title'); ?></span>
                                     </div>      
                                 </div>
                             <?php } else { ?>
                                 <div class="row collections-tile">
                                     <div class="col-xs-6 col-sm-6 col-md-6">
-                                        <?php the_sub_field('title'); ?>
+                                        <span><?php the_sub_field('title'); ?></span>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="padding-da-da"></div> 
                                         <?php 
                                             if(get_sub_field('image')) {
                                                 $image = get_sub_field('image');?>
-                                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" id="<?php the_sub_field('id'); ?>"/>
                                         <?php }?>
                                     </div>
                                 </div>

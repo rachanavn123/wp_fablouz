@@ -56,7 +56,7 @@ foreach ( $myposts as $post ) : setup_postdata( $post );?>
             <div class="col-md-6 col-sm-6">
                 <h4><?php the_sub_field('section_header'); ?> </h4>
                 <div class="image-type-details">
-                    <?php the_sub_field('description'); ?>
+                    <?php the_sub_field('short_description'); ?>
                 </div>
                 <div>
                     <span class="font-bold">Product ID: </span> <span><?php the_sub_field('product_id'); ?></span>

@@ -368,9 +368,10 @@ nav > ul {
     /* Initialize counter. */
     position: absolute;
     top: 99.6%;
-    right: 5.4rem;
+    right: 4.6rem;
     margin-top: 15px;
     color: #464749;
+    width: 3.2rem;
 }
 
 .owl-dots:after {
@@ -508,6 +509,10 @@ nav > ul {
     display: flex;
 }
 
+.mozilla .collections-tile {
+    display: block;
+}
+
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     .collections-tile {
         padding: 0;
@@ -520,9 +525,18 @@ nav > ul {
     padding: 0;
     color: #313132;
     font-size: 1.1rem;
-    display: flex;
+    display: flex;    
     align-items: center;
     justify-content: center;
+}
+
+.mozilla .collections-tile > div {
+    display: block;
+}
+
+.mozilla .collections-tile > div span {
+    display: inline-flex;
+    margin-top: 37%;
 }
 
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {

@@ -161,6 +161,10 @@ $(document).ready(function() {
         animationTime : 200,
         offsetTop: 100
     });
+
+    if($.browser.mozilla) {
+        $("body").addClass("mozilla");
+    }
 });
 
 // Show the map
